@@ -9,7 +9,7 @@
 1. Склонируйте репозиторий:
 
     ```bash
-    git clone https://github.com/KirillEL/QBTFarm
+    git clone https://github.com/KirillEL/ctf-up
     ```
 
 2. Внесите изменения в данный скрипт:
