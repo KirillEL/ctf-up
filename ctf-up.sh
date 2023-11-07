@@ -3,9 +3,18 @@
 git clone https://github.com/KirillEL/QBTFarm
 
 
+cd QBTFarm/
 
+echo "
+POSTGRES_HOST=qbt_db
+POSTGRES_PASSWORD=<>
+POSTGRES_USER=postgres
+POSTGRES_DB=qbt_farm
+" >> .env
 
+make start
 
+cd ..
 
 
 git clone --recurse-submodules https://gitlab.com/packmate/Packmate.git
@@ -23,17 +32,5 @@ PACKMATE_MODE=LIVE
 # Интерфейс, на котором производится перехват трафика
 PACKMATE_INTERFACE=any" >> .env
 
+docker-compose up --build -d
 
-
-# iptables -F
-
-# # Разрешим все исходящие соединения
-# iptables -A OUTPUT -j ACCEPT
-
-# # Запретим входящие соединения, кроме указанных IP-адресов в VLAN_IPS
-# for ip in $vlan_ips; do
-#   iptables -A INPUT -s $ip -j ACCEPT
-# done
-
-# # Запретим все остальные входящие соединения
-# iptables -A INPUT -j DROP
