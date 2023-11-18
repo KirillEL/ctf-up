@@ -23,14 +23,13 @@ cd Packmate/
 
 echo "# Локальный IP сервера на указанном интерфейсе или в pcap файле
 PACKMATE_LOCAL_IP=<YOUR_VULNBOX_IP>
-# Имя пользователя для web-авторизации
 PACKMATE_WEB_LOGIN=<YOUR_LOGIN>
-# Пароль для web-авторизации
 PACKMATE_WEB_PASSWORD=<YOUR_PASSWORD>
-# Режим работы - перехват
 PACKMATE_MODE=LIVE
-# Интерфейс, на котором производится перехват трафика
-PACKMATE_INTERFACE=any" >> .env
+PACKMATE_INTERFACE=any
+PACKMATE_OLD_STREAMS_CLEANUP_ENABLED=true
+PACKMATE_OLD_STREAMS_CLEANUP_INTERVAL=1
+PACKMATE_OLD_STREAMS_CLEANUP_THRESHOLD=60" >> .env
 
 docker-compose up --build -d
 
