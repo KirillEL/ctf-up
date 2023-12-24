@@ -12,7 +12,6 @@ POSTGRES_USER=postgres
 POSTGRES_DB=qbt_farm
 " >> .env
 
-make start
 
 cd ..
 
@@ -31,5 +30,4 @@ PACKMATE_OLD_STREAMS_CLEANUP_ENABLED=true
 PACKMATE_OLD_STREAMS_CLEANUP_INTERVAL=1
 PACKMATE_OLD_STREAMS_CLEANUP_THRESHOLD=60" >> .env
 
-docker-compose up --build -d
 
